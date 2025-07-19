@@ -40,13 +40,13 @@
     }
   },
   {
-    "name": "Tour-Planner",
-    "desc": "A ReactJS-based Travel Destination App with a stylish UI, showcasing destinations, images, prices, and Toast notifications.",
-    "image": "PlanWithLove",
+    "name": "Admin-Dashboard",
+    "desc": "Responsive React/Next.js app with login, admin dashboard, and user list. Built using Context API with clean, modular, and mobile-friendly design.",
+    "image": "adminDashboard",
     "category": "mern",
     "links": {
-      "view": "https://plan-with-love-react02.netlify.app/",
-      "code": "https://github.com/mkraj-7838/Plan_with_Love"
+      "view": "https://admin-dashboard-ashy-five-18.vercel.app/",
+      "code": "https://github.com/mkraj-7838/Admin-Dashboard"
     }
   },
   {

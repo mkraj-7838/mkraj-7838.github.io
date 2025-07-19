@@ -39,6 +39,14 @@ $(document).ready(function () {
 
 });
 
+function showToast(message, isSuccess) {
+    const toast = document.createElement('div');
+    toast.className = `toast ${isSuccess ? 'success' : 'error'}`;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+}
+
 document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form from refreshing
 
@@ -52,11 +60,11 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
         .then(function (response) {
             console.log('SUCCESS!', response.status, response.text);
             document.getElementById("contact-form").reset(); // Reset form
-            alert("Form Submitted Successfully!");
+            showToast("Form submitted successfully!", true);
         })
         .catch(function (error) {
             console.log('FAILED...', error);
-            alert("Form Submission Failed! Please try again.");
+            showToast("Submission failed. Try again!", false);
         });
 });
 

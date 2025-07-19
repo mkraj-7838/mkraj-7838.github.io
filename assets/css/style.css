@@ -124,6 +124,16 @@ header .navbar ul li a:hover {
 /* navbar ends */
 
 /* hamburger icon starts*/
+
+.btn {
+  background: linear-gradient(45deg, #2506ad, #6a11cb);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 6, 173, 0.3);
+}
 #menu {
   font-size: 3rem;
   cursor: pointer;
@@ -227,9 +237,16 @@ header .navbar ul li a:hover {
   color: #002057;
 }
 .home .content h2 span {
-  font-size: 5rem;
-  font-weight: 800;
-  color: #ff7b00;
+  background: linear-gradient(45deg, #2506ad, #ff7b00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 3s infinite alternate;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 .home .content p {
   font-size: 2.5rem;
@@ -650,6 +667,14 @@ header .navbar ul li a:hover {
 }
 .work .heading span {
   color: rgb(255, 230, 0);
+}
+
+.work .box {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.work .box:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
 }
 .work .box-container {
   display: flex;
@@ -1223,3 +1248,17 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+
+.toast {
+  position: fixed;
+  top: 20px;
+  font-size: 1.5rem;
+  right: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  z-index: 1000;
+}
+.toast.success { background: #4CAF50; }
+.toast.error { background: #F44336; }
